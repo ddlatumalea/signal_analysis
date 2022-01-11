@@ -28,7 +28,7 @@ def figure2():
     plt.xlabel('$x$'); plt.ylabel('$y$')
     plt.title('Sinusoids')
     plt.legend()
-    
+
 def figure3():
     x = np.linspace(0.0, 1.0, 101)
     xi = np.linspace(0.0, 1.0, 12, endpoint=False)
@@ -49,7 +49,7 @@ def figure3():
     plt.xlabel('$x$'); plt.ylabel('$y$')
     plt.title('Sinusoids')
     plt.legend()
-    
+
 def figure4():
     x = np.linspace(0.0, 1.0, 101)
     y = sum(np.sin(2.0 * np.pi * f * x) / f for f in range(1, 51))
@@ -58,7 +58,7 @@ def figure4():
     plt.xlabel('$x$'); plt.ylabel('$y$')
     plt.title('Sinusoids')
     plt.legend()
-    
+
 def figure5():
     x = np.linspace(0.0, 1.0, 101)
     y = 3.0 * np.cos(2.0 * np.pi * x)
@@ -70,7 +70,7 @@ def figure5():
     plt.xlabel('$x$'); plt.ylabel('$y$')
     plt.title('Sum of sinusoids')
     plt.grid(True); plt.legend(); plt.yticks(np.arange(-5, 6))
-    
+
 def figure6():
     x = np.linspace(0.0, 1.0, 101)
     xi = np.linspace(0.0, 1.0, 12, endpoint=False)
@@ -122,7 +122,7 @@ def figure8():
     plt.xlabel('$x$'); plt.ylabel('$y$')
     plt.title('Example')
     plt.grid(True)
-    
+
 def figure9():
     xi, yi = np.array([0.0, 0.5, 1.0, 1.5, 2.0]), np.array([1.0, 3.0, -1.0, 1.0, 2.0])
     x = np.linspace(-0.5, 2.5, 61)
@@ -132,7 +132,7 @@ def figure9():
     plt.xlabel('$x$'); plt.ylabel('$y$')
     plt.title('Example')
     plt.grid(True)
-    
+
 def figure10():
     C = np.cos(np.pi * np.outer(np.arange(12), np.arange(7)) / 6.0)
     S = np.sin(np.pi * np.outer(np.arange(12), np.arange(1, 6)) / 6.0)
@@ -213,8 +213,8 @@ def figure14():
         plt.xlabel('$f$')
         if figure % 2 == 0: plt.ylabel('$A$')
         plt.title(f'Spectrum #{figure+1}')
-        
-    
+
+
 def figure(fignum=0):
     fignum = int(fignum)
     caption = eval(f'figure{fignum}()')
@@ -223,6 +223,6 @@ def figure(fignum=0):
     plt.show()
     print(f'Figure {fignum}: {caption}')
 
-    
+
 if __name__ == '__main__':
     figure()
